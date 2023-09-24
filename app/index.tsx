@@ -35,6 +35,8 @@ export default function Page() {
         <Button label="ButtonPrimary" variant={ButtonVariant.Primary} />
         <Button label="ButtonSecondary" variant={ButtonVariant.Secondary} />
         <Button label="ButtonDisabled" variant={ButtonVariant.Disabled} />
+        <Button label="ButtonBorder" variant={ButtonVariant.Border} />
+        <Button label="ButtonBorderDark" variant={ButtonVariant.BorderDark} />
       </View>
     </View>
   );

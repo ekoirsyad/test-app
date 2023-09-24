@@ -9,6 +9,8 @@ export enum ButtonVariant {
   Primary = 'primary',
   Secondary = 'secondary',
   Disabled = 'disabled',
+  Border = 'border',
+  BorderDark = 'border-dark',
 }
 
 interface ButtonVariantProps {
@@ -51,6 +53,32 @@ const useButtonVariant = (variant: ButtonVariant) => {
     };
     variantStyle.text = {
       color: Color.white,
+    };
+  } else if (variant === ButtonVariant.Border) {
+    /**
+     * Border button variant
+     */
+    variantStyle.container = {
+      backgroundColor: Color.transparent,
+      borderWidth: 2,
+      padding: 16,
+      borderColor: Color.primary,
+    };
+    variantStyle.text = {
+      color: Color.primary,
+    };
+  } else if (variant === ButtonVariant.BorderDark) {
+    /**
+     * Border button variant
+     */
+    variantStyle.container = {
+      backgroundColor: Color.transparent,
+      borderWidth: 2,
+      padding: 16,
+      borderColor: Color.dark,
+    };
+    variantStyle.text = {
+      color: Color.dark,
     };
   }
 
