@@ -12,7 +12,7 @@ import { Color } from '@/styles/color';
 export default function TabsLayout() {
   return (
     <Tabs
-      initialRouteName="home"
+      initialRouteName="index"
       screenOptions={{
         tabBarStyle: {
           backgroundColor: Color.white,
@@ -21,7 +21,7 @@ export default function TabsLayout() {
       }}
       tabBar={(props) => <BottomTabBar {...props} />}>
       <Tabs.Screen
-        name="home"
+        name="index"
         options={{
           href: '/home',
           title: '',

@@ -30,7 +30,11 @@ export default function RootLayout() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Stack>
+      <Stack
+        initialRouteName="tabs"
+        screenOptions={{
+          headerShown: false,
+        }}>
         <Stack.Screen
           name="(tabs)"
           options={{
