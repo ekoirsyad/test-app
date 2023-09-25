@@ -11,7 +11,6 @@ import { TouchableOpacity } from 'react-native-gesture-handler';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 import Edit from '@/assets/Edit';
-import Button from '@/components/ButtonVariant';
 import { Color } from '@/styles/color';
 
 export default function RootLayout() {
@@ -38,15 +37,6 @@ export default function RootLayout() {
             headerShown: false,
           }}
         />
-        {/* <Stack.Screen
-            name="other"
-            options={{
-              title: "",
-              headerShown: true,
-              headerTransparent: Platform.OS === "ios",
-              headerBlurEffect: "regular",
-            }}
-          /> */}
       </Stack>
       <View
         style={{
