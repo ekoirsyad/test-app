@@ -1,12 +1,12 @@
 {
   "expo": {
-    "name": "nobi",
-    "slug": "nobi",
+    "name": "Test App",
+    "slug": "Test App",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
-    "scheme": "your-app-scheme",
+    "scheme": "tabs",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -29,9 +29,6 @@
     },
     "experiments": {
       "tsconfigPaths": true
-    },
-    "plugins": [
-      "expo-router"
-    ]
+    }
   }
 }
