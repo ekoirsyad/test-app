@@ -38,7 +38,14 @@ const CardHeader = () => {
   );
 };
 
-const CardImage = () => {
+const CardImage = ({ description }: { description: string }) => {
+  const isMore = description.length > 200;
+  const truncate = (str: string) => {
+    if (isMore) {
+      return str.substring(0, 200) + '...';
+    }
+    return str;
+  };
   return (
     <View>
       <Text
@@ -48,8 +55,15 @@ const CardImage = () => {
           marginVertical: PixelRatio.roundToNearestPixel(24),
           paddingHorizontal: PixelRatio.roundToNearestPixel(24),
         }}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus in ipsum ac dictum.
-        Integer et nunc ut tellus tinci
+        {truncate(description)}
+        {isMore && (
+          <Text
+            style={{
+              color: Color.primary,
+            }}>
+            More
+          </Text>
+        )}
       </Text>
       <Image
         source={require('src/assets/Image.png')}
@@ -123,11 +137,11 @@ const CardFooter = () => {
   );
 };
 
-const Card = () => {
+const Card = ({ description }: { description: string }) => {
   return (
     <View style={styles.container}>
       <CardHeader />
-      <CardImage />
+      <CardImage description={description} />
       <CardFooter />
     </View>
   );
